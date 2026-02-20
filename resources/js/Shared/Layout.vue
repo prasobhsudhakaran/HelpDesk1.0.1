@@ -12,15 +12,15 @@
 
       <!-- Sidebar -->
       <div class="hidden lg:flex lg:flex-col lg:w-72 lg:shrink-0">
-        <!-- Sidebar Header -->
-        <div class="relative border-b border-primary-500/20">
+        <!-- Sidebar Header (SOD Infotech brand) -->
+        <div class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 border-b border-primary-500/20">
           <!-- Background Pattern -->
-          <div class="absolute inset-0 opacity-50" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+          <div class="absolute inset-0 opacity-40" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.06&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
 
           <div class="relative flex items-center justify-between px-6 py-5">
             <Link href="/" class="group flex items-center space-x-3">
-              <div class="h-10 bg-white/20 flex items-center justify-center transition-all duration-300">
-                <Logo class="h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              <div class="h-10 bg-white/15 flex items-center justify-center transition-all duration-300 rounded-lg px-2">
+                <Logo name="white" class="h-5 text-white group-hover:scale-110 transition-transform duration-300 max-h-8" />
               </div>
             </Link>
             <button
@@ -40,15 +40,15 @@
 
       <!-- Mobile Sidebar -->
       <div v-if="mobileMenuOpen" class="fixed inset-y-0 left-0 z-50 w-72 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 lg:hidden">
-        <!-- Mobile Header -->
-        <div class="relative border-b border-primary-500/20">
+        <!-- Mobile Header (SOD Infotech brand) -->
+        <div class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 border-b border-primary-500/20">
           <!-- Background Pattern -->
-          <div class="absolute inset-0 opacity-50" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+          <div class="absolute inset-0 opacity-40" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.06&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
 
           <div class="relative flex items-center justify-between px-6 py-5">
             <Link href="/" class="group flex items-center space-x-3">
-              <div class="h-10 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                <Logo class="h-6 text-white" />
+              <div class="h-10 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 rounded-lg px-2">
+                <Logo name="white" class="h-6 text-white max-h-8" />
               </div>
             </Link>
             <button

@@ -6,8 +6,10 @@ use App\Http\Middleware\RedirectIfCustomer;
 use App\Http\Middleware\RedirectIfNotParmitted;
 use App\Models\City;
 use App\Models\Country;
+use App\Models\Organization;
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
@@ -26,6 +28,7 @@ class CustomersController extends Controller {
             'title' => 'Customers',
             'filters' => Request::all(['search']),
             'users' => User::orderByName()
+                ->with('organization')
                 ->whereRoleId($customerRole ? $customerRole->id : 0)
                 ->filter(Request::all(['search']))
                 ->paginate(10)
@@ -34,9 +37,11 @@ class CustomersController extends Controller {
                     'id' => $user->id,
                     'name' => $user->name,
                     'city' => $user->city,
-                    'country' => $user->country_id ? $user->country->name: null,
+                    'country' => $user->country_id ? $user->country->name : null,
                     'email' => $user->email,
                     'phone' => $user->phone,
+                    'organization_id' => $user->organization_id,
+                    'organization' => $user->organization ? ['id' => $user->organization->id, 'name' => $user->organization->name] : null,
                     'role' => $user->role,
                     'role_id' => $user->role_id,
                     'photo' => $user->photo_path,
@@ -51,7 +56,11 @@ class CustomersController extends Controller {
             'countries' => Country::orderBy('name')
                 ->get()
                 ->map
-                ->only('id', 'name')
+                ->only('id', 'name'),
+            'organizations' => Organization::orderBy('name')
+                ->get()
+                ->map
+                ->only('id', 'name'),
         ]);
     }
 
@@ -65,6 +74,7 @@ class CustomersController extends Controller {
             'city' => ['nullable'],
             'address' => ['nullable'],
             'country_id' => ['nullable'],
+            'organization_id' => ['nullable', Rule::exists('organizations', 'id')],
             'role_id' => ['nullable'],
         ]);
         if(Request::file('photo')){
@@ -99,9 +109,14 @@ class CustomersController extends Controller {
                 'can_delete' => $can_delete,
                 'address' => $user->address,
                 'country_id' => $user->country_id,
+                'organization_id' => $user->organization_id,
                 'photo_path' => $user->photo_path,
             ],
             'countries' => Country::orderBy('name')
+                ->get()
+                ->map
+                ->only('id', 'name'),
+            'organizations' => Organization::orderBy('name')
                 ->get()
                 ->map
                 ->only('id', 'name'),
@@ -127,11 +142,12 @@ class CustomersController extends Controller {
             'city' => ['nullable'],
             'address' => ['nullable'],
             'country_id' => ['nullable'],
+            'organization_id' => ['nullable', Rule::exists('organizations', 'id')],
             'role_id' => ['nullable'],
             'photo' => ['nullable', 'image'],
         ]);
 
-        $user->update(Request::only('first_name', 'last_name', 'phone', 'email', 'city', 'address', 'country_id', 'role_id'));
+        $user->update(Request::only('first_name', 'last_name', 'phone', 'email', 'city', 'address', 'country_id', 'organization_id', 'role_id'));
 
         if(Request::file('photo')){
             if(isset($user->photo_path) && !empty($user->photo_path) && File::exists(public_path($user->photo_path))){

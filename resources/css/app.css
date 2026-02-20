@@ -8,4 +8,16 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    /* SOD Infotech logo primary (bright blue from logo) */
+    --color-primary-50: #e6f9fd;
+    --color-primary-100: #b3ecfa;
+    --color-primary-200: #80dff6;
+    --color-primary-300: #4dd2f2;
+    --color-primary-400: #1ac5ee;
+    --color-primary-500: #00AEEF;
+    --color-primary-600: #008bc0;
+    --color-primary-700: #006891;
+    --color-primary-800: #004562;
+    --color-primary-900: #002233;
+    --color-primary-950: #001119;
 }

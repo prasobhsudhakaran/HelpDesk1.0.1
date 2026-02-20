@@ -8,7 +8,7 @@
             <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
 
             <!-- Animated Mesh Gradient -->
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-600/15 via-transparent to-blue-600/15 animate-pulse"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-600/15 via-transparent to-primary-500/15 animate-pulse"></div>
 
             <!-- Dynamic Grid Pattern -->
             <div class="absolute inset-0 opacity-30">
@@ -16,14 +16,14 @@
             </div>
 
             <!-- Floating Geometric Shapes -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary-500/20 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary-500/20 to-primary-400/10 rounded-full blur-3xl animate-pulse"></div>
             <div class="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/15 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-br from-cyan-500/20 to-blue-500/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-br from-primary-400/20 to-primary-500/15 rounded-full blur-3xl animate-pulse delay-500"></div>
 
             <!-- Animated Particles -->
             <div class="absolute top-20 left-20 w-2 h-2 bg-white/40 rounded-full animate-ping"></div>
             <div class="absolute top-40 right-32 w-3 h-3 bg-primary-300/60 rounded-full animate-ping delay-1000"></div>
-            <div class="absolute bottom-32 left-16 w-1 h-1 bg-blue-300/80 rounded-full animate-ping delay-500"></div>
+            <div class="absolute bottom-32 left-16 w-1 h-1 bg-primary-300/80 rounded-full animate-ping delay-500"></div>
             <div class="absolute top-60 right-1/4 w-2 h-2 bg-purple-300/50 rounded-full animate-ping delay-700"></div>
         </div>
 
@@ -47,13 +47,13 @@
                                 <div class="space-y-4">
                                     <h5 class="text-white font-semibold mb-4">Follow Us</h5>
                                     <div class="flex items-center gap-3">
-                                        <a href="#" class="group w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                                        <a href="#" class="group w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl flex items-center justify-center hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-110 hover:shadow-xl">
                                             <Facebook class="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                                         </a>
                                         <a href="#" class="group w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center hover:from-sky-600 hover:to-sky-700 transition-all duration-300 hover:scale-110 hover:shadow-xl">
                                             <Twitter class="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                                         </a>
-                                        <a href="#" class="group w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center hover:from-blue-800 hover:to-blue-900 transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                                        <a href="#" class="group w-12 h-12 bg-gradient-to-br from-primary-700 to-primary-800 rounded-2xl flex items-center justify-center hover:from-primary-800 hover:to-primary-900 transition-all duration-300 hover:scale-110 hover:shadow-xl">
                                             <Linkedin class="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                                         </a>
                                         <a href="#" class="group w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center hover:from-pink-600 hover:to-pink-700 transition-all duration-300 hover:scale-110 hover:shadow-xl">

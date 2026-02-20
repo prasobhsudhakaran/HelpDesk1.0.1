@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+  <div class="min-h-screen bg-gradient-to-br from-primary-50 via-slate-50 to-primary-100/80 dark:from-slate-900 dark:via-primary-950 dark:to-slate-900">
     <!-- Background Pattern -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-400/20 to-primary-600/15 rounded-full blur-3xl"></div>
       <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-pink-400/20 rounded-full blur-3xl"></div>
     </div>
 
@@ -37,7 +37,7 @@
                   getStepStatus(index) === 'completed' 
                     ? 'bg-green-500 text-white' 
                     : getStepStatus(index) === 'current'
-                    ? 'bg-blue-500 text-white'
+                    ? 'bg-primary-600 text-white'
                     : 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400'
                 ]"
               >

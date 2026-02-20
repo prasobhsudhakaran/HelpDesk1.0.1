@@ -14,6 +14,10 @@
             <option :value="null" />
             <option v-for="c in countries" :key="c.id" :value="c.id">{{ c.name }}</option>
           </select-input>
+          <select-input v-model="form.organization_id" :error="form.errors.organization_id" class="pb-8 pr-6 w-full lg:w-1/3" :label="$t('Organization')">
+            <option :value="null" />
+            <option v-for="org in organizations" :key="org.id" :value="org.id">{{ org.name }}</option>
+          </select-input>
           <text-input v-model="form.password" :error="form.errors.password" class="pb-8 pr-6 w-full lg:w-1/3" type="password" autocomplete="new-password" :label="$t('Password')" />
           <file-input v-model="form.photo" :error="form.errors.photo" class="pb-8 pr-6 w-full lg:w-1/2" type="file" accept="image/*" :label="$t('Photo')" />
         </div>
@@ -46,6 +50,7 @@ export default {
   props: {
     countries: Array,
     cities: Array,
+    organizations: Array,
     title: String,
   },
   remember: 'form',
@@ -59,6 +64,7 @@ export default {
         city: null,
         address: '',
         country_id: null,
+        organization_id: null,
         password: '',
         role_id: null,
         photo: null

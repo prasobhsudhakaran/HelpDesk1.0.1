@@ -1,12 +1,12 @@
 <template>
   <Head title="Login" />
 
-  <!-- Modern Login Page with Gradient Background -->
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center p-4">
+  <!-- Modern Login Page – SOD Infotech brand -->
+  <div class="min-h-screen bg-gradient-to-br from-primary-50 via-slate-50 to-primary-100/80 dark:from-slate-900 dark:via-primary-950 dark:to-slate-900 flex items-center justify-center p-4">
     <!-- Background Pattern -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-pink-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-400/20 to-primary-600/15 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary-500/15 to-primary-700/10 rounded-full blur-3xl"></div>
     </div>
 
     <!-- Flash Messages -->
@@ -73,7 +73,7 @@
                 id="remember"
                 v-model="form.remember"
                 type="checkbox"
-                class="w-4 h-4 text-blue-600 bg-white border-slate-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-slate-800 focus:ring-2 dark:bg-slate-700 dark:border-slate-600"
+                class="w-4 h-4 text-primary-600 bg-white border-slate-300 rounded focus:ring-primary-500 dark:focus:ring-primary-500 dark:ring-offset-slate-800 focus:ring-2 dark:bg-slate-700 dark:border-slate-600"
               />
               <span class="ml-2 text-sm text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
                 {{ $t('Remember Me') }}
@@ -81,7 +81,7 @@
             </label>
             <Link
               :href="route('password.reset')"
-              class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+              class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
             >
               {{ $t('Forgot Password?') }}
             </Link>
@@ -115,7 +115,7 @@
           <loading-button
             :disabled="(disable_login_button && site_key) || isLoggingIn"
             :loading="isLoggingIn"
-            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
+            class="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
             type="submit"
           >
             <span v-if="!isLoggingIn">{{ $t('Sign In') }}</span>
@@ -128,7 +128,7 @@
               {{ $t("Don't have an account?") }}
               <Link
                 :href="route('register')"
-                class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                class="font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
               >
                 {{ $t('Sign Up') }}
               </Link>
@@ -160,7 +160,7 @@
             </button>
             <button
               @click="autofillLogin($event, 'manager', true)"
-              class="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg"
+              class="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg"
             >
               <Shield class="w-4 h-4 mr-2" />
               Manager

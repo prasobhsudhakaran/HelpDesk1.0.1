@@ -15,7 +15,7 @@
             </div>
             <Link 
               :href="route('customers.create')" 
-              class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm hover:shadow-md"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 shadow-sm hover:shadow-md"
             >
               <Plus class="w-4 h-4" />
               {{ $t('Create New Customer') }}
@@ -67,6 +67,9 @@
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
                   {{ $t('Location') }}
+                </th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
+                  {{ $t('Organization') }}
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
                   {{ $t('Status') }}
@@ -134,6 +137,9 @@
                   </div>
                 </td>
                 <td class="px-6 py-4">
+                  <span class="text-sm text-slate-600 dark:text-slate-300">{{ user.organization ? user.organization.name : '—' }}</span>
+                </td>
+                <td class="px-6 py-4">
                   <span 
                     :class="[
                       'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium',
@@ -158,7 +164,7 @@
                   <div class="flex items-center justify-end gap-2">
                     <Link 
                       :href="route('customers.edit', user.id)"
-                      class="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors duration-150"
+                      class="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded-lg transition-colors duration-150"
                     >
                       <Edit class="w-4 h-4" />
                       {{ $t('Edit') }}

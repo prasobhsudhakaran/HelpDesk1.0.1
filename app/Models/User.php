@@ -29,6 +29,7 @@ class User extends Authenticatable
         'city',
         'address',
         'country_id',
+        'organization_id',
         'title',
         'photo_path',
     ];
@@ -58,6 +59,10 @@ class User extends Authenticatable
 
     public function country(){
         return $this->belongsTo(Country::class, 'country_id');
+    }
+
+    public function organization(){
+        return $this->belongsTo(Organization::class, 'organization_id');
     }
 
 //    public function city(){
@@ -120,9 +125,6 @@ class User extends Authenticatable
         return $this->hasMany(Ticket::class);
     }
 
-    public function organizations() {
-        return $this->hasMany(Organization::class);
-    }
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.

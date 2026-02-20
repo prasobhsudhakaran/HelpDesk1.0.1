@@ -11,7 +11,7 @@
             <!-- Animated Background -->
             <div class="absolute inset-0">
                 <!-- Gradient Mesh -->
-                <div class="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-blue-600/20"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-primary-500/20"></div>
 
                     <!-- Animated Grid -->
                     <div class="absolute inset-0 opacity-30">
@@ -20,13 +20,13 @@
 
                 <!-- Floating Orbs -->
                 <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-                <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 <div class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/15 rounded-full blur-3xl animate-pulse delay-500"></div>
 
                 <!-- Geometric Shapes -->
                 <div class="absolute top-20 left-20 w-4 h-4 bg-white/30 rotate-45 animate-spin"></div>
                 <div class="absolute top-40 right-32 w-6 h-6 bg-primary-300/40 rounded-full animate-ping"></div>
-                <div class="absolute bottom-32 left-16 w-3 h-3 bg-blue-300/50 rotate-12 animate-bounce"></div>
+                <div class="absolute bottom-32 left-16 w-3 h-3 bg-primary-300/50 rotate-12 animate-bounce"></div>
             </div>
 
             <div class="container relative z-10 py-16">
@@ -68,7 +68,7 @@
                         <!-- Main Image Container -->
                         <div class="relative group">
                             <!-- Glow Effect -->
-                            <div class="absolute -inset-8 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
+                            <div class="absolute -inset-8 bg-gradient-to-r from-primary-500/20 to-primary-400/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
 
                             <!-- Image Frame -->
                             <div class="relative bg-white bg-opacity-5 rounded-3xl p-1 border border-white border-opacity-10 shadow-2xl" style="backdrop-filter: blur(4px);">
@@ -80,7 +80,7 @@
                         </div>
 
                         <!-- Floating Elements -->
-                        <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-primary-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-xl animate-bounce">
+                        <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-xl animate-bounce">
                             <MessageCircle class="w-8 h-8 text-white" />
                         </div>
                         <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl animate-pulse">
